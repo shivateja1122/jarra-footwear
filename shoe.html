@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JARRA FOOTWEAR | Product Details</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .gallery {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .main-image {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .thumbnails {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .thumbnails img {
+      width: 70px;
+      height: 70px;
+      border-radius: 8px;
+      cursor: pointer;
+      object-fit: cover;
+      transition: 0.3s;
+    }
+
+    .thumbnails img:hover {
+      transform: scale(1.1);
+    }
+
+    .product-details {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .product-details h1 {
+      margin-bottom: 10px;
+      font-size: 32px;
+    }
+
+    .price {
+      font-size: 24px;
+      color: #FFD700;
+      margin-bottom: 20px;
+    }
+
+    .sizes {
+      margin: 20px 0;
+    }
+
+    .sizes span {
+      background: #eee;
+      padding: 8px 14px;
+      margin-right: 8px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .sizes span:hover {
+      background: #FFD700;
+      color: black;
+    }
+
+    .add-cart-btn {
+      background: black;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.3s;
+    }
+
+    .add-cart-btn:hover {
+      background: #FFD700;
+      color: black;
+    }
+
+    .reviews {
+      margin-top: 40px;
+    }
+
+    .review {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      margin-bottom: 15px;
+    }
+
+    .review h4 {
+      margin-bottom: 5px;
+    }
+
+    .review p {
+      font-size: 14px;
+      color: #666;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Image Gallery -->
+    <div class="gallery">
+      <img src="images/shoeee1.png" alt="Main Shoe" class="main-image" id="mainImage">
+      <div class="thumbnails">
+        <img src="images/shoe1.png" onclick="changeImage(this.src)">
+        <img src="images/shoee2.png" onclick="changeImage(this.src)">
+        <img src="images/shoee1.png" onclick="changeImage(this.src)">
+        <img src="images/shoee4.png" onclick="changeImage(this.src)">
+      </div>
+    </div>
+
+    <!-- Product Details -->
+    <div class="product-details">
+      <h1>JARRA Flex Knit</h1>
+      <p class="price">129.00</p>
+
+      <div class="sizes">
+        <strong>Available Sizes:</strong><br><br><br>
+        <span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span>
+      </div>
+
+      <button class="add-cart-btn">Add to Cart</button>
+
+      <div class="reviews">
+        <h2>Customer Reviews</h2>
+        <div class="review">
+          <h4>⭐️⭐️⭐️⭐️⭐️ - Amazing Fit!</h4>
+          <p>Really comfortable and lightweight. Perfect for travel and everyday use.</p>
+        </div>
+        <div class="review">
+          <h4>⭐️⭐️⭐️⭐️ - Great style</h4>
+          <p>The design is modern and fits well with my outfits. Would recommend.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function changeImage(src) {
+      document.getElementById('mainImage').src = src;
+    }
+  </script>
+
+</body>
+</html>
